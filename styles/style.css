@@ -1,0 +1,273 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: black;
+  color: white;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #f19c0a;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+}
+.logo__img {
+  animation: ease-in animat 1s;
+}
+@keyframes animat {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+ul li a {
+  color: #f19c0a;
+  margin: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+footer {
+  padding: 30px;
+  background-color: black;
+  position: sticky;
+  bottom: 0;
+}
+
+footer ul {
+  color: #f19c0a;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+/*index*/
+.main img {
+  width: 100%;
+}
+.video__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.video__container div {
+  margin: 20px;
+}
+
+.article_container {
+  padding: 20px;
+}
+article {
+  display: flex;
+}
+article p {
+  font-size: 1.3rem;
+  padding: 30px;
+}
+
+/* galeria */
+
+.galeria__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 20px;
+  justify-items: center;
+}
+.galeria__container--img {
+  width: 350px;
+  height: 350px;
+  transition: 0.3s ease all;
+}
+.galeria__container--img:hover {
+  transform: scale(1.07);
+}
+
+/*eventos*/
+
+.main__events {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-row-gap: 10px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+  justify-items: center;
+}
+
+.main__events--img {
+  width: 500px;
+}
+
+/*contacto */
+
+.main__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.form__container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.form__container--fielset {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: black;
+  font-weight: bold;
+  background: #ff9d00;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.button {
+  margin: auto;
+}
+
+/*biografia */
+
+.biografia__container {
+  display: flex;
+  padding: 10px;
+}
+.biografia__tex {
+  padding: 15px;
+}
+
+.biografia__tex--content {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 2;
+  color: white;
+}
+
+/*media queries*/
+
+/*tablet*/
+@media only screen and (max-width: 768px) {
+  /*estilos generales*/
+  header {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  header img {
+    width: 500px;
+  }
+
+  /*index*/
+  .video__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  iframe {
+    width: 500px;
+  }
+  .article_info-a {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .article_info-a img {
+    width: 50%;
+  }
+  .article_info-b {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /*galeria*/
+  .galeria__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .galeria__container--img {
+    width: 300px;
+    height: 300px;
+  }
+  /*biografia*/
+  .biografia__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  /*eventos*/
+  .main__events {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .main__events--img {
+    width: 300px;
+  }
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 320px) {
+  /* estilos generales*/
+  header img {
+    width: 300px;
+  }
+  header ul li a {
+    font-size: 14px;
+  }
+  footer ul li {
+    font-size: 16px;
+  }
+
+  /*index*/
+  iframe {
+    width: 300px;
+  }
+  /*galeria*/
+  .galeria__container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  /*biografia*/
+  .biografia__img--picture {
+    width: 100%;
+  }
+  .biografia__tex--content {
+    font-size: 1rem;
+  }
+  /*eventos*/
+  .main__events {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+  }
+  /*contacto*/
+  .main__contact {
+    flex-direction: column;
+  }
+  .form__container {
+    width: 100%;
+  }
+}

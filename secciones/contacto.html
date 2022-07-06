@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>Document</title>
+  <link rel="stylesheet" href="../styles/style.css">
+
+<body>
+  <header><img src="../img/logo.png">
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./galeria.html">Galería</a></li>
+        <li><a href="./biografia.html">Biografía</a></li>
+        <li><a href="./eventos.html">Eventos</a></li>
+        <li><a href="./contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Contacto</h1>
+  <section class="main__contact">
+    <h2 class="sub-title">Deja tus datos y te contacto en breve!!</h2>
+    <form class="form__container">
+      <fieldset class="form__container--fielset">
+        <br>
+        <label for="nombre">Nombre y Apellido</label>
+        <input type="text" name="nombre">
+        <br>
+        <label for="mail"> correo electronico</label>
+        <input type="text" name="mail">
+        <br>
+        <div>Indique evento de su interes:</div>
+        <br>
+        <select name="eventos">
+          <option value="fiesta">Fiesta Privada</option>
+          <option value="evento">Evento Empresarial</option>
+          <option value="festival">festival</option>
+        </select>
+        <br>
+        <div>Ingrese su rango de Edad:</div>
+        <input type="checkbox" name="joven" value="18 y 30" /> entre 18 y 30 años
+        <input type="checkbox" name="adulto" value="30 y 45 " /> entre 30 y 45 años
+        <input type="checkbox" name="publico selecto" value=" 45 años" /> mas de 45 años
+        <br>
+        <input type="reset" value="limpiar formulario" class="button" />
+        <br>
+        <input type="submit" value="enviar info" class="button" />
+        </fielset>
+    </form>
+  </section>
+  <footer>
+    <ul>
+      <li>Instagram</li>
+      <li>Facebook</li>
+      <li>Twitter</li>
+      <li>YouTube</li>
+    </ul>
+  </footer>
+  <!--scripts-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
